@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Network Monitoring</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { padding: 10px; border: 1px solid #ccc; text-align: center; }
+    th { background: #333; color: white; }
+  </style>
+</head>
+<body>
+
+  <h2>Status Perangkat</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>IP Address</th>
+        <th>Status</th>
+        <th>Bandwidth (Mbps)</th>
+      </tr>
+    </thead>
+    <tbody id="deviceTable"></tbody>
+  </table>
+
+  <h2>Grafik Bandwidth</h2>
+  <canvas id="chart" style="max-height:300px"></canvas>
+
+  <h2>Log Aktivitas</h2>
+  <ul id="logs"></ul>
+
+  <script defer src="main.js"></script>
+</body>
+</html>
